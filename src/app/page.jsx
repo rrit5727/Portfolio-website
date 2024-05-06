@@ -25,16 +25,19 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
+      
       <head>
         <title>Portfolio</title>
         <meta name="description"/>
         <link rel="icon" href="/favicon.ico" />
       </head>
+      
 
-      <main className="bg-white px-10 md:px-20 lg:-px-40 dark:bg-gray-900">
-        <section id="nav" >
-          <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="text-xl font-burtons">Ross Ritchie</h1>
+      <main className="bg-white  dark:bg-gray-900 relative">
+        <div className="h-screen  snap-y snap-mandatory overflow-scroll px-10 md:px-20 lg:-px-40" >
+        
+          <nav className="py-5 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white">
+            <h1 className="text-xl font-burtons">R/R</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl"/>
@@ -44,17 +47,21 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-        </section>
-        <section id="intro" >
-          <div className="relative flex flex-col md:flex-row justify-evenly space-y-5 items-center text-center md:text-left md:max-h-fit">
+        
+        <section id="intro" className=" h-screen snap-start pt-40 py-20">
+          <div className="relative flex flex-col md:flex-row space-y-5 items-center justify-center text-center md:text-left md:max-h-fit">
             <div className="text-left p-10">
               <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Hello, my name is </h4>
               <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400">Ross Ritchie</h2>
               <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Junior Software Developer</h3>
               <h4 className="text-1xl py-2 md:text-2xl dark:text-white">In Sydney</h4>
             </div>
-            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96" >
-              <Image src={headshot} layout="fill" objectFit="cover"/>
+            <div className="w-1">              
+            </div>
+            <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden p-10" >
+              <div className="rounded-full overflow-hidden border-8 border-black border-solid">
+                <Image src={headshot} layout="fill" objectFit="cover"/>
+              </div>
             </div>
           </div>
             <div className="text-5xl flex justify-center gap-16 py-1 text-gray-600 dark:text-gray-400">
@@ -64,7 +71,7 @@ export default function Home() {
 
         {/* 2nd page here */}
 
-        <section id="about">
+        <section id="about" className=" h-screen snap-start pt-20">
           <div>
             <h3 className="text-3xl py-2 dark:text-white" >Services offered:</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -125,7 +132,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+
+        <section id="portfolio" className=" h-screen snap-start pt-20">
           <div>
             <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -160,6 +168,7 @@ export default function Home() {
             </div>                            
           </div>
         </section>
+        </div>
       </main>
     </div>
   );
