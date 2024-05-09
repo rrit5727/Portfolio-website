@@ -5,14 +5,7 @@ import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin} from "react-icons/ai";
 import headshot from '../../public/rr-head-shot.jpg';
 import deved from '../../public/dev-ed-wave.png';
-import excel from '../../public/excel.png';
-import excel2 from '../../public/excel2.png';
-import excel3 from '../../public/excel3.jpeg';
-import excel5 from '../../public/excel5.png';
-import coding from '../../public/coding.png';
-import design from '../../public/design.png';
-import code from '../../public/code.png';
-import consulting from '../../public/consulting.png';
+import excel7 from '../../public/excel7.png';
 import web1 from '../../public/web1.png';
 import web2 from '../../public/web2.png';
 import web3 from '../../public/web3.png';
@@ -64,6 +57,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+          
         
         <section id="intro" className=" h-screen snap-start pt-40 py-20">
           <div className="relative flex flex-col md:flex-row space-y-5 items-center justify-center text-center md:text-left md:max-h-fit">
@@ -86,18 +80,17 @@ export default function Home() {
             </div>
         </section>
 
-        {/* 2nd page here */}
-
-        <section id="About" className=" h-screen snap-start pt-20">
+        <section id="About" className="  snap-start mx-20 pt-20 overflow-hidden h-4/5 mb-40">
           <div>
             <h3 className="text-3xl py-1 dark:text-white">About Me</h3>            
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap h-4/5 overflow-hidden">
-            <div className="basis-1/3 flex-1">
-              <Image src={excel5} className="rounded-lg object-cover " ></Image>
-            </div>            
-          </div>
+          <div className="aspect-w-3 aspect-h-2 overflow-hidden " >
+            <Image src={excel7} className="rounded-lg object-contain w-full h-full" ></Image>
+          </div>                    
         </section>
+
+        {/* 2nd page here */}
+
 
         <section id="projects" className=" h-screen snap-start pt-20">
           <div>
