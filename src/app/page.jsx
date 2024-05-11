@@ -95,19 +95,19 @@ export default function Home() {
 
 
         
-        <section id="intro" className=" snap-start pt-40 py-20 flex-row justify-center h-4/5 mb-40">
-          <div className="pt-20 relative flex flex-col md:flex-row space-y-5 items-center justify-center text-center md:text-left md:max-h-fit">
-            <div className="text-left p-10">
+        <section id="intro" className=" snap-start pt-40 py-20 flex-row justify-center  h-4/5 mb-40 overflow-hidden">
+          <div className="pt-20 relative  flex flex-col md:flex-row space-y-5  justify-evenly text-center md:text-left md:max-h-fit">
+            <div className="text-left p-10 min-w-[380px] w-380px whitespace-nowrap">
               <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Hello, my name is </h4>
               <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400">Ross Ritchie</h2>
               <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Junior Software Developer</h3>
               <h4 className="text-1xl py-2 md:text-2xl dark:text-white">In Sydney</h4>
+            </div>           
+            <div className="w-[40px] min-w-[40px]">              
             </div>
-            <div className="w-20">              
-            </div>
-            <div className="relative  bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 overflow-hidden p-10" >
-              <div className="rounded-full overflow-hidden border-8 border-black border-solid">
-                <Image src={headshot} layout="fill" objectFit="cover"/>
+            <div className="relative h-[380px] w-[380px] min-w-[380px] sm:w-[255px] bg-gradient-to-b from-teal-500 rounded-full overflow-hidden border-8 border-gray-500 border-solid" >
+              <div className="rounded-full  overflow-hidden ">
+                <Image src={headshot} layout="fill" objectFit="cover" />
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section id="About" className="  snap-start mx-20 pt-20 overflow-hidden h-4/5 mb-40">
+        <section id="about" className="  snap-start mx-20 pt-20 overflow-hidden h-4/5 mb-40">
           <div>
             <h3 className="text-3xl py-1 dark:text-white">About Me</h3>            
           </div>
