@@ -4,14 +4,21 @@ import Head from "next/head";
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin} from "react-icons/ai";
 import headshot from '../../public/rr-head-shot.jpg';
-import deved from '../../public/dev-ed-wave.png';
 import excel7 from '../../public/excel7.png';
-import web1 from '../../public/web1.png';
-import web2 from '../../public/web2.png';
-import web3 from '../../public/web3.png';
-import web4 from '../../public/web4.png';
-import web5 from '../../public/web5.png';
-import web6 from '../../public/web6.png';
+import css from '../../public/dev-icons/css.png';
+import aws from '../../public/dev-icons/aws.png';
+import bootstrap from '../../public/dev-icons/bootstrap.png';
+import express from '../../public/dev-icons/express.png';
+import github from '../../public/dev-icons/github.png';
+import html from '../../public/dev-icons/html.png';
+import js from '../../public/dev-icons/js.png';
+import mongodb from '../../public/dev-icons/mongodb.png';
+import next from '../../public/dev-icons/next.png';
+import node from '../../public/dev-icons/node.png';
+import postgresql from '../../public/dev-icons/postgresql.png';
+import python from '../../public/dev-icons/python.png';
+import react from '../../public/dev-icons/react.png';
+import tailwind from '../../public/dev-icons/tailwind.png';
 import { useClient } from 'next/client';
 import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
@@ -92,11 +99,62 @@ export default function Home() {
           </nav>
 
 
+        <section id="skills" className=" h-screen snap-start pt-20">
+          <div className="flex-col justify-center items-center text-center">
+            <div className="h-[100px]">
+              <h3 className="text-3xl py-1 dark:text-white">Skills</h3>                                        
+            </div>
+            <div className="flex-row" >
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={css} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={aws} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={bootstrap} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={express} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={github} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={html} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={js} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={mongodb} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={next} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={node} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={postgresql} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={python} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={react} layout="fill" objectFit="cover" />
+              </div>
+              <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                <Image src={tailwind} layout="fill" objectFit="cover" />
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         
-        <section id="intro" className=" snap-start pt-40 py-20 flex-row justify-center  h-4/5 mb-40 overflow-hidden">
-          <div className="pt-20 relative  flex flex-col md:flex-row space-y-5  justify-evenly text-center md:text-left md:max-h-fit">
+        <section id="intro" className=" snap-start pt-40 py-20 flex-row h-4/5 mb-40 overflow-hidden">
+          <div className="pt-20 relative px-40 flex flex-col md:flex-row space-y-5 items-center justify-evenly text-center md:text-left md:max-h-fit">
             <div className="text-left p-10 min-w-[380px] w-380px whitespace-nowrap">
               <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Hello, my name is </h4>
               <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400">Ross Ritchie</h2>
@@ -160,11 +218,6 @@ export default function Home() {
 
 
                 
-        <section id="skills" className=" h-screen snap-start pt-20">
-          <div>
-            <h3 className="text-3xl py-1 dark:text-white">Skills</h3>                                        
-          </div>
-        </section>
         </div>
       </main>
     </div>
