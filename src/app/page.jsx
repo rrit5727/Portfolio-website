@@ -99,69 +99,6 @@ export default function Home() {
           </nav>
 
 
-        <section id="skills" className=" h-screen snap-start pt-20">
-          <div className="flex-col justify-center items-center text-center justify-items-end">
-            <div className="h-[100px]">
-              <h3 className="text-3xl py-1 dark:text-white">Skills</h3>                                        
-            </div>
-            <div id="grid-container" className="flex justify-center flex-wrap sm:px-0 sm:mx-0">
-              <div className="
-              justify-center justify-items-center text-center
-              md:grid md:grid-cols-6 md:grid-rows-3 md:min-w-[900px] 
-              sm:grid sm:grid-cols-4 sm:grid-rows-5 sm:min-w-[500px]">
-                <div className=" relative h-[150px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={css}  objectFit="cover" classname="w-[100px] h-[100px] py-10" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={aws} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={bootstrap} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={express} layout="fill" objectFit="contain" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={github} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={html} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={js} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={mongodb} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={next} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={node} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={postgresql} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
-                  <Image src={python} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="
-                relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  
-                sm:col-start-2 md:col-start-3 " >
-                  <Image src={react} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                <div className="
-                relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  
-                sm:col-start-3 md:col-start-4 " >
-                  <Image src={tailwind} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div>
-                {/* <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  sm:col-start-3 sm:grid-row-start-4 " >
-                  <Image src={tailwind} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
-                </div> */}
-              </div>
-            </div>
-          </div>
-        </section>
 
 
         
@@ -203,7 +140,7 @@ export default function Home() {
                 backgroundPosition: 'center',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
-            }} 
+              }} 
               className="w-full h-full rounded-2xl bg-center bg-contain duration-500 "
             >
             {/* Left Arrow */}
@@ -228,6 +165,69 @@ export default function Home() {
           </div>  
         </section>   
 
+        <section id="skills" className=" h-screen snap-start pt-20">
+          <div className="flex-col justify-center items-center text-center justify-items-end">
+            <div className="h-[100px]">
+              <h3 className="text-3xl py-1 dark:text-white">Skills</h3>                                        
+            </div>
+            <div id="grid-container" className="flex justify-center flex-wrap sm:px-0 sm:mx-0">
+              <div className="
+              justify-center justify-items-center text-center
+              md:grid md:grid-cols-6 md:grid-rows-3 md:min-w-[900px] 
+              sm:grid sm:grid-cols-4 sm:grid-rows-5 sm:min-w-[500px]">
+                <div class="fadeInUp" className=" relative h-[150px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={css}  objectFit="cover" classname="w-[100px] h-[100px] py-10" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={aws} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={bootstrap} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={express} layout="fill" objectFit="contain" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={github} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={html} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={js} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={mongodb} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={next} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={node} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={postgresql} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
+                  <Image src={python} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="
+                relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  
+                sm:col-start-2 md:col-start-3 " >
+                  <Image src={react} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                <div class="fadeInUp" className="
+                relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  
+                sm:col-start-3 md:col-start-4 " >
+                  <Image src={tailwind} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div>
+                {/* <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  sm:col-start-3 sm:grid-row-start-4 " >
+                  <Image src={tailwind} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </section>
 
                 
         </div>
