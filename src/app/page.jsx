@@ -108,7 +108,7 @@ export default function Home() {
               <div className="
               justify-center justify-items-center text-center
               md:grid md:grid-cols-6 md:grid-rows-3 md:min-w-[900px] 
-              sm:grid sm:grid-cols-3 sm:grid-rows-5 sm:min-w-[500px]">
+              sm:grid sm:grid-cols-4 sm:grid-rows-5 sm:min-w-[500px]">
                 <div className=" relative h-[150px] w-[100px] bg-gradient-to-b overflow-hidden">
                   <Image src={css}  objectFit="cover" classname="w-[100px] h-[100px] py-10" />
                 </div>
@@ -145,12 +145,19 @@ export default function Home() {
                 <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden">
                   <Image src={python} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
                 </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden sm:col-span-1 sm:row-span-1" style={{ gridColumn: '3', gridRow: '3'}}>
+                <div className="
+                relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  
+                sm:col-start-2 md:col-start-3 " >
                   <Image src={react} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
                 </div>
-                <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden sm:col-span-1 sm:row-span-1" style={{ gridColumn: '4', gridRow: '3'}}>
+                <div className="
+                relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  
+                sm:col-start-3 md:col-start-4 " >
                   <Image src={tailwind} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
                 </div>
+                {/* <div className="relative h-[100px] w-[100px] bg-gradient-to-b overflow-hidden  sm:col-start-3 sm:grid-row-start-4 " >
+                  <Image src={tailwind} layout="fill" objectFit="cover" classname="w-[100px] h-[100px]" />
+                </div> */}
               </div>
             </div>
           </div>
