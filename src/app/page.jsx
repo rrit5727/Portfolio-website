@@ -22,7 +22,8 @@ import tailwind from '../../public/dev-icons/tailwind.png';
 import { useClient } from 'next/client';
 import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import {RxDotFilled} from 'react-icons/rx'
+import {RxDotFilled} from 'react-icons/rx';
+import { motion } from "framer-motion";
 
 
 
@@ -75,27 +76,35 @@ export default function Home() {
         <div className="h-screen  snap-y snap-mandatory overflow-scroll px-10 md:px-20 lg:-px-40" >
         
           <nav className="py-5 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-900">
-            <h1 className="text-xl font-burtons">R/R</h1>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl"/>
-              </li>
-              <li>
-                <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#intro">Intro</a>
-              </li>
-              <li>
-                <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#about">About</a>
-              </li>
-              <li>
-                <a className=" text-black  dark:text-white px-4 py-2 rounded-md ml-8" href="/#projects">Projects</a>
-              </li>
-              <li>
-                <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#skills">Skills</a>
-              </li>
-              <li>
-                <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="#">Resume</a>
-              </li>
-            </ul>
+            <div class="fadeInUp">
+              <h1 className="text-xl font-burtons">R/R</h1>
+            </div>
+            <motion.div
+              initial={{ x: 0, opacity: 0, scale: 0.5 }}
+              animate={{ x: 0, opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5 }}
+            >
+              <ul className="flex items-center" >
+                <li>
+                  <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl"/>
+                </li>
+                <li>
+                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#intro">Intro</a>
+                </li>
+                <li>
+                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#about">About</a>
+                </li>
+                <li>
+                  <a className=" text-black  dark:text-white px-4 py-2 rounded-md ml-8" href="/#projects">Projects</a>
+                </li>
+                <li>
+                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#skills">Skills</a>
+                </li>
+                <li>
+                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="#">Resume</a>
+                </li>
+              </ul>
+            </motion.div>
           </nav>
 
 
@@ -112,7 +121,7 @@ export default function Home() {
             </div>           
             <div className="w-[40px] min-w-[40px]">              
             </div>
-            <div className="relative h-[380px] w-[380px] min-w-[380px] sm:w-[255px] bg-gradient-to-b from-teal-500 rounded-full overflow-hidden border-8 border-gray-500 border-solid" >
+            <div className="relative h-[380px] w-[380px] min-w-[380px] sm:w-[255px] bg-gradient-to-b from-teal-600 rounded-full overflow-hidden border-8 border-teal-500 border-solid" >
               <div className="rounded-full  overflow-hidden ">
                 <Image src={headshot} layout="fill" objectFit="cover" />
               </div>
