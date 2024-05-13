@@ -34,3 +34,21 @@ body {
   font-family: "burtons"; 
   src: url("../../public/Burtons.otf");
 }
+
+
+@media screen and (max-width: 768px) {
+  #grid-container {
+    flex-wrap: wrap;
+  }
+
+  #grid-container > div {
+    flex-basis: 33.33%;
+  }
+  
+  #grid-container > div:nth-child(13),
+  #grid-container > div:nth-child(13) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  
+}
