@@ -20,10 +20,12 @@ import python from '../../public/dev-icons/python.png';
 import react from '../../public/dev-icons/react.png';
 import tailwind from '../../public/dev-icons/tailwind.png';
 import { useClient } from 'next/client';
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import {RxDotFilled} from 'react-icons/rx';
 import { motion } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
+import { red } from "tailwindcss/colors";
 
 
 
@@ -62,6 +64,10 @@ export default function Home() {
     setCurrentIndex(slideIndex);
   }
 
+  const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
+
+  const [textColor, setTextColor] = useState('black');
+
   return (
     <div className={darkMode ? "dark" : ""}>
       
@@ -73,7 +79,7 @@ export default function Home() {
       
 
       <main className="bg-white  dark:bg-gray-900 relative">
-        <div className="h-screen  snap-y snap-mandatory overflow-scroll px-10 md:px-20 lg:-px-40" >
+        <div className="h-screen  snap-y snap-mandatory overflow-scroll " >
         
           <nav className="py-5 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-900">
             <div class="fadeInUp">
@@ -85,7 +91,7 @@ export default function Home() {
               transition={{ duration: 1.5 }}
             >
               <ul className="flex items-center" >
-                <li className="ml-5 border-b-0 hover:border-b-4 hover:border-b-secondary dark:hover:border-b-secondary_dark py-1">
+                <li className="ml-5 border-b-0">
                   <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl"/>
                 </li>
                 <li>
@@ -131,12 +137,32 @@ export default function Home() {
 
 
         
-        <section id="intro" className=" snap-start pt-40 py-20 flex-row h-4/5 mb-40 overflow-hidden">
-          <div className="pt-20 relative px-40 flex flex-col md:flex-row space-y-5 items-center justify-evenly text-center md:text-left md:max-h-fit">
+        <section id="intro" className=" snap-start pt-20 py-20 flex-row h-4/5 mb-40 overflow-hidden">
+          <div className="pt-20 relative px-40 flex flex-col md:flex-row space-y-5 items-center justify-evenly text-center md:text-left md:max-h-fit" >
             <div className="text-left p-10 min-w-[380px] w-380px whitespace-nowrap">
               <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Hello, my name is </h4>
               <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400">Ross Ritchie</h2>
-              <h3 className="text-2xl py-2 md:text-3xl dark:text-white">Junior Software Developer</h3>
+              <span className="text-3xl">I am a <span> </span>
+                  <TypeAnimation 
+                    cursor={false}              
+                    className={CURSOR_CLASS_NAME}
+                    sequence={[
+                      // Same substring at the start will only be typed out once, initially
+                      ' corporate tax consultant',
+                      1000, // wait 1s before replacing "Mice" with "Hamsters"
+                      ' Software developer',
+                      3000,
+                      () => setTextColor('red'),
+                      ' Software developer.',                  
+                      (el) => el.classList.remove('custom-type-animation-cursor'),                
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    style={{  display: 'inline-block', color: textColor }}
+                    class="custom-type-animation-cursor"
+                    repeat={0}
+                />
+              </span>
               <h4 className="text-1xl py-2 md:text-2xl dark:text-white">In Sydney</h4>
             </div>           
             <div className="w-[40px] min-w-[40px]">              
@@ -152,16 +178,46 @@ export default function Home() {
             </div>
         </section>
 
-        <section id="about" className="  snap-start mx-20 pt-20 overflow-hidden h-4/5 mb-40">
-          <div>
-            <h3 className="text-3xl py-1 dark:text-white">About Me</h3>            
-          </div>
-          <div className="aspect-w-3 aspect-h-2 overflow-hidden " >
-            <Image src={excel7} className="rounded-lg object-contain w-full h-full" ></Image>
-          </div>                    
+        <section id="about" className="  snap-start pt-20 overflow-hidden h-full mb-40">
+          <div className=" text-teal-500 text-3xl text-bold items-center justify-center h-1/4 flex ">
+            <TypeAnimation style={{ color: textColor }}
+              cursor={false}              
+              className={CURSOR_CLASS_NAME}
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                'I am a tax consultant',
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                'I am a Software developer',
+                3000,
+                () => setTextColor('teal-500'),
+                'I am a Software developer.',
+                1000,
+                (el) => el.classList.remove(CURSOR_CLASS_NAME),                
+                1100,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: '2em', display: 'inline-block' }}
+              class="custom-type-animation-cursor"
+              repeat={0}
+            />
+            
+            <style global jsx>{`
+              .custom-type-animation-cursor::after {
+                content: '|';
+                animation: cursor 1.1s infinite step-start;
+              }
+              @keyframes cursor {
+                50% {
+                  opacity: 0;
+                }
+              }
+            `}</style>          
+        
+          </div>                              
         </section>
 
-        <section id="projects" className="h-screen snap-start pt-40 py-20">
+        <section id="projects" className="h-screen snap-start pt-20 py-20">
           <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group" >
             <div 
               style={{
