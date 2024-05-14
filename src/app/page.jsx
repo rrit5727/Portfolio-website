@@ -67,6 +67,7 @@ export default function Home() {
   const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
 
   const [textColor, setTextColor] = useState('black');
+  const [fontWeight, setFontWeight] = useState('normal');
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -142,28 +143,32 @@ export default function Home() {
             <div className="text-left p-10 min-w-[380px] w-380px whitespace-nowrap">
               <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Hello, my name is </h4>
               <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400">Ross Ritchie</h2>
-              <span className="text-3xl">I am a <span> </span>
-                  <TypeAnimation 
-                    cursor={false}              
-                    className={CURSOR_CLASS_NAME}
-                    sequence={[
-                      // Same substring at the start will only be typed out once, initially
-                      ' corporate tax consultant',
-                      1000, // wait 1s before replacing "Mice" with "Hamsters"
-                      ' Software developer',
-                      3000,
-                      () => setTextColor('red'),
-                      ' Software developer.',                  
-                      (el) => el.classList.remove('custom-type-animation-cursor'),                
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    style={{  display: 'inline-block', color: textColor }}
-                    class="custom-type-animation-cursor"
-                    repeat={0}
-                />
-              </span>
-              <h4 className="text-1xl py-2 md:text-2xl dark:text-white">In Sydney</h4>
+              <span className="text-3xl">I am a </span> 
+                  <span className="text-3xl" style={{ color: textColor, fontWeight: fontWeight }}>
+                    <TypeAnimation 
+                      cursor={false}              
+                      className={CURSOR_CLASS_NAME}
+                      sequence={[
+                        // Same substring at the start will only be typed out once, initially
+                        ' corporate tax consultant',
+                        1000, // wait 1s before replacing "Mice" with "Hamsters"
+                        ' Software developer',
+                        () => setTextColor('#14b8a6'),
+                        () => setFontWeight('Bold'),
+                        3000,
+                        ' Software developer.',                  
+                        (el) => el.classList.remove('custom-type-animation-cursor'),                
+                      ]}
+                      wrapper="span"
+                      speed={50}
+                      style={{  display: 'inline-block' }}
+                      class="custom-type-animation-cursor"
+                      repeat={0}
+                    />
+                  
+
+                  </span>
+              <h4 className="text-1xl py-2 md:text-2xl dark:text-white">Based in Sydney</h4>
             </div>           
             <div className="w-[40px] min-w-[40px]">              
             </div>
