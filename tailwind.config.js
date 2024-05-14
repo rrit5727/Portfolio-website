@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -13,6 +15,10 @@ module.exports = {
     extend: {
       fontFamily: {
         burtons: "burtons",
+      },
+      colors: {
+        secondary: '#14b8a6',
+        secondary_dark: '#ffffff'
       }
     },
   },

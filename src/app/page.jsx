@@ -85,23 +85,43 @@ export default function Home() {
               transition={{ duration: 1.5 }}
             >
               <ul className="flex items-center" >
-                <li>
+                <li className="ml-5 border-b-0 hover:border-b-4 hover:border-b-secondary dark:hover:border-b-secondary_dark py-1">
                   <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl"/>
                 </li>
                 <li>
-                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#intro">Intro</a>
+                  <a className="
+                      text-black dark:text-white  px-4 py-2  ml-8
+                      border-b-0 hover:border-b-4 hover:border-b-secondary dark:hover:border-b-secondary_dark" 
+                    href="/#intro">Intro
+                  </a>
                 </li>
                 <li>
-                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#about">About</a>
+                  <a className="
+                      text-black dark:text-white  px-4 py-2  ml-8
+                      border-b-0 hover:border-b-4 hover:border-b-secondary dark:hover:border-b-secondary_dark" 
+                    href="/#about">About
+                  </a>
                 </li>
                 <li>
-                  <a className=" text-black  dark:text-white px-4 py-2 rounded-md ml-8" href="/#projects">Projects</a>
+                  <a className="
+                      text-black dark:text-white  px-4 py-2  ml-8
+                      border-b-0 hover:border-b-4 hover:border-b-secondary dark:hover:border-b-secondary_dark" 
+                    href="/#projects">Projects
+                  </a>
                 </li>
                 <li>
-                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="/#skills">Skills</a>
+                  <a className="
+                      text-black dark:text-white  px-4 py-2  ml-8
+                      border-b-0 hover:border-b-4 hover:border-b-secondary dark:hover:border-b-secondary_dark" 
+                    href="/#skills">Skills
+                  </a>
                 </li>
                 <li>
-                  <a className=" text-black dark:text-white  px-4 py-2 rounded-md ml-8" href="#">Resume</a>
+                  <a className="
+                      text-black dark:text-white  px-4 py-2  ml-8
+                      border-b-0 hover:border-b-4 hover:border-b-secondary dark:hover:border-b-secondary_dark" 
+                    href="/#resume">Resume
+                  </a>
                 </li>
               </ul>
             </motion.div>
