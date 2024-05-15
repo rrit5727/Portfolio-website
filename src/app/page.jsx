@@ -79,12 +79,12 @@ export default function Home() {
       </head>
       
 
-      <main className="bg-white  dark:bg-gray-900 relative">
-        <div className="h-screen  snap-y snap-mandatory overflow-scroll " >
+      <main className="bg-green-100  dark:bg-gray-900 relative ">
+        <div className="h-screen snap-y snap-mandatory overflow-scroll px=10" >
         
-          <nav className="py-5 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-900">
+          <nav className="px-5 pt-10 pb-10 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-900">
             <div class="fadeInUp">
-              <h1 className="text-xl font-burtons">R/R</h1>
+              <h1 className="text-3xl font-burtons">R . R</h1>
             </div>
             <motion.div
               initial={{ x: 0, opacity: 0, scale: 0.5 }}
@@ -134,10 +134,64 @@ export default function Home() {
             </motion.div>
           </nav>
 
+          <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-slate-100">
+          <div className="text-black text-3xl font-bold items-center justify-center pt-10 pb-5 flex">
+            <h1 className="text-3xl font-bold">About ME-PT</h1>
+          </div>
+          <div className="pt-5 relative px-20 flex flex-col space-y-5 items-start justify-evenly text-center md:text-left md:max-h-fit">
+            <div className="text-left text-2xl w-full max-w-7xl mx-auto">
+              <div className="flex flex-col items-start">
+                <h5 className="text-xl font-bold mb-2">User</h5>
+                <div className="bg-teal-200 p-5 rounded-lg shadow-lg mb-5 w-full">
+                  <TypeAnimation
+                    cursor={false}
+                    className="custom-type-animation-cursor"
+                    style={{ whiteSpace: 'pre-line', height: 'auto', display: 'block' }}
+                    sequence={[
+                      `Tell me about yourself.`,
+                      1000,                  
+                      (el) => el.classList.remove('custom-type-animation-cursor'),
+                    ]}
+                    speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
+                    omitDeletionAnimation={true}
+                    repeat={0}
+                  />
+                </div>
+                <h5 className="text-xl font-bold mb-2">Ross</h5>
+                <div className="bg-teal-200 p-5 rounded-lg shadow-lg mb-5 w-full">
+                  <TypeAnimation
+                    cursor={false}
+                    className="custom-type-animation-cursor"
+                    style={{ whiteSpace: 'pre-line', height: 'auto', display: 'block' }}
+                    sequence={[
+                      ``,
+                      1000,
+                      `Sure!
 
+                      I started out as a corporate tax consultant and found that I really enjoyed using excel formulas to streamline analysing transaction data for tax purposes.
+                      
+                      I soon realised that the best part of my job was using algorithmic thinking to solve problems, speed up manual processes, and reduce errors.
+                      
+                      I figured that coding would be a better fit for this type of creative problem-solving and learned to code long into the night after finishing my day job.
+                      
+                      The late-nights didn't bother me as my enthusiasm for coding meant that I could happily spend hours on a project that solved a practical problem.
+                      
+                      I worked in a team throughout my previous career and was also the main point of client contact. As a result, I bring valuable skills that complement the technical skills required in software engineering.`,
+                      
+                      (el) => el.classList.remove('custom-type-animation-cursor'),
+                    ]}
+                    speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
+                    omitDeletionAnimation={true}
+                    repeat={0}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className=""></div>
+          </div>
+        </section>
 
-
-        
+                   
         <section id="intro" className=" snap-start pt-20 py-20 flex-row h-4/5 mb-40 overflow-hidden">
           <div className="pt-20 relative px-40 flex flex-col md:flex-row space-y-5 items-center justify-evenly text-center md:text-left md:max-h-fit" >
             <div className="text-left p-10 min-w-[380px] w-380px whitespace-nowrap">
@@ -182,45 +236,9 @@ export default function Home() {
               <AiFillLinkedin />
             </div>
         </section>
-
-        <section id="about" className="  snap-start pt-20 overflow-hidden h-full mb-40">
-          <div className=" text-teal-500 text-3xl text-bold items-center justify-center h-1/4 flex ">
-            <TypeAnimation style={{ color: textColor }}
-              cursor={false}              
-              className={CURSOR_CLASS_NAME}
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                'I am a tax consultant',
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                'I am a Software developer',
-                3000,
-                () => setTextColor('teal-500'),
-                'I am a Software developer.',
-                1000,
-                (el) => el.classList.remove(CURSOR_CLASS_NAME),                
-                1100,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: '2em', display: 'inline-block' }}
-              class="custom-type-animation-cursor"
-              repeat={0}
-            />
-            
-            <style global jsx>{`
-              .custom-type-animation-cursor::after {
-                content: '|';
-                animation: cursor 1.1s infinite step-start;
-              }
-              @keyframes cursor {
-                50% {
-                  opacity: 0;
-                }
-              }
-            `}</style>          
         
-          </div>                              
-        </section>
+        
+        
 
         <section id="projects" className="h-screen snap-start pt-20 py-20">
           <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group" >
@@ -253,7 +271,7 @@ export default function Home() {
               ))}
             </div>
           </div>  
-        </section>   
+        </section>
 
         <section id="skills" className=" h-screen snap-start pt-20">
           <div className="flex-col justify-center items-center text-center justify-items-end">
