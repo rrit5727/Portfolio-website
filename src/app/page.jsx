@@ -26,6 +26,7 @@ import {RxDotFilled} from 'react-icons/rx';
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { red } from "tailwindcss/colors";
+import {EmblaCarousel} from './components/EmblaCarousel'
 
 
 
@@ -45,26 +46,29 @@ export default function Home() {
       url: 'https://raw.githubusercontent.com/rrit5727/Project2/main/Readme_images/Item-list.png',
     }           
   ]
-  const [currentIndex, setCurrentIndex] = useState(1)
+  // const [currentIndex, setCurrentIndex] = useState(1)
   const [darkMode, setDarkMode] = useState(false);
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex -1;
-    setCurrentIndex(newIndex);
-  };
+  // const prevSlide = () => {
+  //   const isFirstSlide = currentIndex === 0;
+  //   const newIndex = isFirstSlide ? slides.length - 1 : currentIndex -1;
+  //   setCurrentIndex(newIndex);
+  // };
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length -1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex)
-  }
+  // const nextSlide = () => {
+  //   const isLastSlide = currentIndex === slides.length -1;
+  //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+  //   setCurrentIndex(newIndex)
+  // }
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  }
+  // const goToSlide = (slideIndex) => {
+  //   setCurrentIndex(slideIndex);
+  // }
 
   const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
+
+  
+
 
   const [textColor, setTextColor] = useState('black');
   const [fontWeight, setFontWeight] = useState('normal');
@@ -82,7 +86,7 @@ export default function Home() {
       <main className="bg-green-100  dark:bg-gray-900 relative ">
         <div className="h-screen snap-y snap-mandatory overflow-scroll px=10" >
         
-          <nav className="px-5 pt-10 pb-10 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-white dark:bg-gray-900">
+          <nav className="px-5 pt-10 pb-10 mb-12 flex justify-between dark:text-white sticky top-0 z-50 bg-green-100 dark:bg-gray-900">
             <div class="fadeInUp">
               <h1 className="text-3xl font-burtons">R . R</h1>
             </div>
@@ -134,7 +138,62 @@ export default function Home() {
             </motion.div>
           </nav>
 
-          <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-slate-100">
+            <section id="projects" className="h-screen snap-start pt-5 flex justify-center items-center">              
+              <div className="flex flex-col items-center justify-center h-4/5 w-4/5 rounded-lg overflow-hidden">
+                <h1 className="text-3xl py-10">
+                  Projects
+                </h1>
+                <div className="h-full w-full m-auto py-16 px-20 relative group bg-teal-200 rounded-lg overflow-hidden" >
+                  <EmblaCarousel />
+                </div>  
+              </div>
+            </section>
+
+            <section id="projects" className="h-screen snap-start pt-5 flex justify-center items-center">              
+              <div className="flex flex-col items-center justify-center h-4/5 w-4/5 rounded-lg overflow-hidden">
+                <h1 className="text-3xl py-10">
+                  Projects
+                </h1>
+                <div className="h-full w-full m-auto py-16 px-20 relative group bg-teal-200 rounded-lg overflow-hidden" >
+                  
+                    <div 
+                      style={{
+                        backgroundImage: `url(${slides[currentIndex].url})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                        borderRadius: '5%',
+                        overflow: 'hidden',                                              
+                      }} 
+                      className="w-3/5 h-full rounded-lg overflow-hidden bg-center bg-contain duration-500"
+                    >
+                        {/* Left Arrow */}
+                        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2-xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+                          <BsChevronCompactLeft onClick={prevSlide} size={30}/>
+                        </div>
+                        {/* Right Arrow */}
+                      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2-xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+                        <BsChevronCompactRight onClick={nextSlide} size={30}/>
+                      </div>
+                    </div>
+                    <div className="flex top-4 justify-center py-2">
+                      {slides.map((slide, slideIndex) => (
+                        <div 
+                          key={slideIndex} 
+                          onClick={() => goToSlide(slideIndex)} 
+                          className="text-2xl cursor-pointer">
+                          <RxDotFilled />
+                        </div>
+                      ))}
+                    </div>
+                    <div>
+
+                    </div>                  
+                </div>  
+              </div>
+            </section>
+
+          <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-green-100">
           <div className="text-black text-3xl font-bold items-center justify-center pt-10 pb-5 flex">
             <h1 className="text-3xl font-bold">About ME-PT</h1>
           </div>
@@ -238,6 +297,8 @@ export default function Home() {
         </section>
         
         
+        
+
         
 
         <section id="projects" className="h-screen snap-start pt-20 py-20">
