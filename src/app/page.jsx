@@ -67,7 +67,7 @@ export default function Home() {
 
   const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
 
-  
+
 
 
   const [textColor, setTextColor] = useState('black');
@@ -140,58 +140,15 @@ export default function Home() {
 
             <section id="projects" className="h-screen snap-start pt-5 flex justify-center items-center">              
               <div className="flex flex-col items-center justify-center h-4/5 w-4/5 rounded-lg overflow-hidden">
-                <h1 className="text-3xl py-10">
+                {/* <h1 className="text-3xl py-10">
                   Projects
-                </h1>
+                </h1> */}
                 <div className="h-full w-full m-auto py-16 px-20 relative group bg-teal-200 rounded-lg overflow-hidden" >
                   <EmblaCarousel />
                 </div>  
               </div>
             </section>
-
-            <section id="projects" className="h-screen snap-start pt-5 flex justify-center items-center">              
-              <div className="flex flex-col items-center justify-center h-4/5 w-4/5 rounded-lg overflow-hidden">
-                <h1 className="text-3xl py-10">
-                  Projects
-                </h1>
-                <div className="h-full w-full m-auto py-16 px-20 relative group bg-teal-200 rounded-lg overflow-hidden" >
-                  
-                    <div 
-                      style={{
-                        backgroundImage: `url(${slides[currentIndex].url})`,
-                        backgroundPosition: 'center',
-                        backgroundSize: 'contain',
-                        backgroundRepeat: 'no-repeat',
-                        borderRadius: '5%',
-                        overflow: 'hidden',                                              
-                      }} 
-                      className="w-3/5 h-full rounded-lg overflow-hidden bg-center bg-contain duration-500"
-                    >
-                        {/* Left Arrow */}
-                        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2-xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-                          <BsChevronCompactLeft onClick={prevSlide} size={30}/>
-                        </div>
-                        {/* Right Arrow */}
-                      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2-xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-                        <BsChevronCompactRight onClick={nextSlide} size={30}/>
-                      </div>
-                    </div>
-                    <div className="flex top-4 justify-center py-2">
-                      {slides.map((slide, slideIndex) => (
-                        <div 
-                          key={slideIndex} 
-                          onClick={() => goToSlide(slideIndex)} 
-                          className="text-2xl cursor-pointer">
-                          <RxDotFilled />
-                        </div>
-                      ))}
-                    </div>
-                    <div>
-
-                    </div>                  
-                </div>  
-              </div>
-            </section>
+            
 
           <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-green-100">
           <div className="text-black text-3xl font-bold items-center justify-center pt-10 pb-5 flex">
@@ -294,45 +251,11 @@ export default function Home() {
             <div className="text-5xl flex justify-center gap-16 py-1 text-gray-600 dark:text-gray-400">
               <AiFillLinkedin />
             </div>
-        </section>
+        </section>   
         
-        
-        
+                
 
         
-
-        <section id="projects" className="h-screen snap-start pt-20 py-20">
-          <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group" >
-            <div 
-              style={{
-                backgroundImage: `url(${slides[currentIndex].url})`,
-                backgroundPosition: 'center',
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-              }} 
-              className="w-full h-full rounded-2xl bg-center bg-contain duration-500 "
-            >
-            {/* Left Arrow */}
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2-xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-            <BsChevronCompactLeft onClick={prevSlide} size={30}/>
-          </div>
-            {/* Right Arrow */}
-          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2-xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-            <BsChevronCompactRight onClick={nextSlide} size={30}/>
-          </div>
-            </div>
-            <div className="flex top-4 justify-center py-2">
-              {slides.map((slide, slideIndex) => (
-                <div 
-                  key={slideIndex} 
-                  onClick={() => goToSlide(slideIndex)} 
-                  className="text-2xl cursor-pointer">
-                  <RxDotFilled />
-                </div>
-              ))}
-            </div>
-          </div>  
-        </section>
 
         <section id="skills" className=" h-screen snap-start pt-20">
           <div className="flex-col justify-center items-center text-center justify-items-end">
