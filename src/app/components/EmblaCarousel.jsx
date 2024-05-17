@@ -14,21 +14,23 @@ export const EmblaCarousel = () => {
   }, [emblaApi])
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          <div className="embla__slide">
-            <img src="https://raw.githubusercontent.com/tdha/project-three/main/Readme_imgs/Results.png" alt="" />
+    <div className="embla ">
+      <div className="embla__viewport " ref={emblaRef}>
+        <div className="flex flex-row ">        
+          <div className="embla__container w-1/2 overflow-hidden pt-0">
+            <div className="embla__slide ">
+              <img src="https://raw.githubusercontent.com/tdha/project-three/main/Readme_imgs/Results.png" className='rounded-lg' />
+            </div>
+            <div className="embla__slide">
+              <img src="https://raw.githubusercontent.com/rrit5727/project4/main/Readme_imgs/Home_page.png" className='' />
+            </div>
+            <div className="embla__slide">
+              <img src="https://raw.githubusercontent.com/rrit5727/project4/main/Readme_imgs/Results.png" className='' />
+            </div>          
+            <div className="embla__slide">
+              <img src="https://raw.githubusercontent.com/rrit5727/Project2/main/Readme_images/Item-list.png" className='' />
+            </div>          
           </div>
-          <div className="embla__slide">
-            <img src="https://raw.githubusercontent.com/rrit5727/project4/main/Readme_imgs/Home_page.png" alt="" />
-          </div>
-          <div className="embla__slide">
-            <img src="https://raw.githubusercontent.com/rrit5727/project4/main/Readme_imgs/Results.png" alt="" />
-          </div>          
-          <div className="embla__slide">
-            <img src="https://raw.githubusercontent.com/rrit5727/Project2/main/Readme_images/Item-list.png" alt="" />
-          </div>          
         </div>
       </div>
       <button className="embla__prev" onClick={scrollPrev}>
