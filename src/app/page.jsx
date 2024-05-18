@@ -138,11 +138,11 @@ export default function Home() {
             </motion.div>
           </nav>
 
-            <section id="projects" className="h-screen snap-start pt-5 flex justify-center items-center">              
-              <div className="flex flex-col items-center justify-center h-4/5 w-4/5 rounded-lg overflow-hidden">
-                {/* <h1 className="text-3xl py-10">
+            <section id="projects" className="h-screen snap-start pt- flex justify-center items-center">              
+              <div className="flex flex-col items-center justify-center h-3/5 w-4/5 rounded-lg overflow-hidden">
+                <h1 className="text-3xl pb-5">
                   Projects
-                </h1> */}
+                </h1>
                 <div className="h-full w-full m-auto py-16 px-20 relative group bg-teal-200 rounded-lg overflow-hidden" >
                   <EmblaCarousel />
                 </div>  
