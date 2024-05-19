@@ -166,8 +166,9 @@ export default function Home() {
             
 
       <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-green-100" ref={ref}>
-      <div className="text-black text-3xl font-bold items-center justify-center pt-10 pb-5 flex">
-        <h1 className="text-3xl font-bold">About ME-PT</h1>
+      <div className="text-black text-3xl font-bold items-center justify-center pt-10 pb-5 flex flex-row">
+        <img src="" alt="" />
+        <h1 className="text-3xl font-bold">Chat GP-ME</h1>
       </div>
       <div className="pt-5 relative px-20 flex flex-col space-y-5 items-start justify-evenly text-center md:text-left md:max-h-fit">
         <div className="text-left text-2xl w-full max-w-7xl mx-auto">
@@ -184,7 +185,7 @@ export default function Home() {
                     1000,                  
                     (el) => el.classList.remove('custom-type-animation-cursor'),
                   ]}
-                  speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
+                  speed={{ type: 'keyStrokeDelayInMs', value: 30 }}
                   omitDeletionAnimation={true}
                   repeat={0}
                 />
@@ -199,22 +200,22 @@ export default function Home() {
                   style={{ whiteSpace: 'pre-line', height: 'auto', display: 'block' }}
                   sequence={[
                     ``,
-                    1000,
+                    2000,
                     `Sure!
                     
                     I started out as a corporate tax consultant and found that I really enjoyed using excel formulas to streamline analysing transaction data for tax purposes.
                     
                     I soon realised that the best part of my job was using algorithmic thinking to solve problems, speed up manual processes, and reduce errors.
                     
-                    I figured that coding would be a better fit for this type of creative problem-solving and learned to code long into the night after finishing my day job.
+                    I figured that coding would be a better fit for this type of creative problem-solving and would practice coding  after finishing my day job as a tax consultant.
                     
                     The late-nights didn't bother me as my enthusiasm for coding meant that I could happily spend hours on a project that solved a practical problem.
                     
-                    I worked in a team throughout my previous career and was also the main point of client contact. As a result, I bring valuable skills that complement the technical skills required in software engineering.`,
+                    I worked in a team throughout my previous career and was also the main point of contact for the clients that I managed. As a result, I bring valuable skills that complement the technical skills required in software engineering.`,
                     
                     (el) => el.classList.remove('custom-type-animation-cursor'),
                   ]}
-                  speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
+                  speed={{ type: 'keyStrokeDelayInMs', value: 30 }}
                   omitDeletionAnimation={true}
                   repeat={0}
                 />
@@ -240,7 +241,7 @@ export default function Home() {
       
     <section id="skills" className=" h-screen snap-start pt-20">
       <div className="flex-col justify-center items-center text-center justify-items-end">
-        <div className="h-[100px]">
+        <div className="h-[100px] pt-10">
           <h3 className="text-3xl py-1 dark:text-white">Skills</h3>                                        
         </div>
         <div id="grid-container" className="flex justify-center flex-wrap sm:px-0 sm:mx-0">

@@ -6,6 +6,7 @@
 
 ## Screenshots
 ![Home](Readme_imgs/Portfolio.png)
+![GPT](Readme_imgs/GPT.png)
 
 ## Technologies used: 
 * Next.js
