@@ -20,58 +20,37 @@ import python from '../../public/dev-icons/python.png';
 import react from '../../public/dev-icons/react.png';
 import tailwind from '../../public/dev-icons/tailwind.png';
 import { useClient } from 'next/client';
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import {RxDotFilled} from 'react-icons/rx';
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { red } from "tailwindcss/colors";
-import {EmblaCarousel} from './components/EmblaCarousel'
+import {EmblaCarousel} from './components/EmblaCarousel';
+import { useInView } from "react-intersection-observer";
 
 
 
 export default function Home() {
   
-  const slides = [
-    {
-      url: 'https://raw.githubusercontent.com/tdha/project-three/main/Readme_imgs/Results.png', 
-    },
-    {
-      url: 'https://raw.githubusercontent.com/rrit5727/project4/main/Readme_imgs/Home_page.png',
-    },
-    {
-      url: 'https://raw.githubusercontent.com/rrit5727/project4/main/Readme_imgs/Results.png',
-    },           
-    {
-      url: 'https://raw.githubusercontent.com/rrit5727/Project2/main/Readme_images/Item-list.png',
-    }           
-  ]
-  // const [currentIndex, setCurrentIndex] = useState(1)
+  
   const [darkMode, setDarkMode] = useState(false);
+  const [textColor, setTextColor] = useState('black');
+  const [fontWeight, setFontWeight] = useState('normal');
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+  const {ref, inView} = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
-  // const prevSlide = () => {
-  //   const isFirstSlide = currentIndex === 0;
-  //   const newIndex = isFirstSlide ? slides.length - 1 : currentIndex -1;
-  //   setCurrentIndex(newIndex);
-  // };
-
-  // const nextSlide = () => {
-  //   const isLastSlide = currentIndex === slides.length -1;
-  //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
-  //   setCurrentIndex(newIndex)
-  // }
-
-  // const goToSlide = (slideIndex) => {
-  //   setCurrentIndex(slideIndex);
-  // }
+  useEffect(() => {
+    if (inView && !animationTriggered) {
+      setAnimationTriggered(true);
+    }
+  }, [inView, animationTriggered]);
 
   const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
 
-
-
-
-  const [textColor, setTextColor] = useState('black');
-  const [fontWeight, setFontWeight] = useState('normal');
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -186,7 +165,7 @@ export default function Home() {
       </section>   
             
 
-      <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-green-100">
+      <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-green-100" ref={ref}>
       <div className="text-black text-3xl font-bold items-center justify-center pt-10 pb-5 flex">
         <h1 className="text-3xl font-bold">About ME-PT</h1>
       </div>
@@ -195,47 +174,51 @@ export default function Home() {
           <div className="flex flex-col items-start">
             <h5 className="text-xl font-bold mb-2">User</h5>
             <div className="bg-teal-200 p-5 rounded-lg shadow-lg mb-5 w-full">
-              <TypeAnimation
-                cursor={false}
-                className="custom-type-animation-cursor"
-                style={{ whiteSpace: 'pre-line', height: 'auto', display: 'block' }}
-                sequence={[
-                  `Tell me about yourself.`,
-                  1000,                  
-                  (el) => el.classList.remove('custom-type-animation-cursor'),
-                ]}
-                speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
-                omitDeletionAnimation={true}
-                repeat={0}
-              />
+              {animationTriggered && (
+                <TypeAnimation
+                  cursor={false}
+                  className="custom-type-animation-cursor"
+                  style={{ whiteSpace: 'pre-line', height: 'auto', display: 'block' }}
+                  sequence={[
+                    `Tell me about yourself.`,
+                    1000,                  
+                    (el) => el.classList.remove('custom-type-animation-cursor'),
+                  ]}
+                  speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
+                  omitDeletionAnimation={true}
+                  repeat={0}
+                />
+              )}
             </div>
             <h5 className="text-xl font-bold mb-2">Ross</h5>
             <div className="bg-teal-200 p-5 rounded-lg shadow-lg mb-5 w-full">
-              <TypeAnimation
-                cursor={false}
-                className="custom-type-animation-cursor"
-                style={{ whiteSpace: 'pre-line', height: 'auto', display: 'block' }}
-                sequence={[
-                  ``,
-                  1000,
-                  `Sure!
-                  
-                  I started out as a corporate tax consultant and found that I really enjoyed using excel formulas to streamline analysing transaction data for tax purposes.
-                  
-                  I soon realised that the best part of my job was using algorithmic thinking to solve problems, speed up manual processes, and reduce errors.
-                  
-                  I figured that coding would be a better fit for this type of creative problem-solving and learned to code long into the night after finishing my day job.
-                  
-                  The late-nights didn't bother me as my enthusiasm for coding meant that I could happily spend hours on a project that solved a practical problem.
-                  
-                  I worked in a team throughout my previous career and was also the main point of client contact. As a result, I bring valuable skills that complement the technical skills required in software engineering.`,
-                  
-                  (el) => el.classList.remove('custom-type-animation-cursor'),
-                ]}
-                speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
-                omitDeletionAnimation={true}
-                repeat={0}
-              />
+              {animationTriggered && (
+                <TypeAnimation
+                  cursor={false}
+                  className="custom-type-animation-cursor"
+                  style={{ whiteSpace: 'pre-line', height: 'auto', display: 'block' }}
+                  sequence={[
+                    ``,
+                    1000,
+                    `Sure!
+                    
+                    I started out as a corporate tax consultant and found that I really enjoyed using excel formulas to streamline analysing transaction data for tax purposes.
+                    
+                    I soon realised that the best part of my job was using algorithmic thinking to solve problems, speed up manual processes, and reduce errors.
+                    
+                    I figured that coding would be a better fit for this type of creative problem-solving and learned to code long into the night after finishing my day job.
+                    
+                    The late-nights didn't bother me as my enthusiasm for coding meant that I could happily spend hours on a project that solved a practical problem.
+                    
+                    I worked in a team throughout my previous career and was also the main point of client contact. As a result, I bring valuable skills that complement the technical skills required in software engineering.`,
+                    
+                    (el) => el.classList.remove('custom-type-animation-cursor'),
+                  ]}
+                  speed={{ type: 'keyStrokeDelayInMs', value: 5 }}
+                  omitDeletionAnimation={true}
+                  repeat={0}
+                />
+              )}
             </div>
           </div>
         </div>
