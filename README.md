@@ -1,9 +1,11 @@
 # Personal portfolio website
 * Made with Next.js, React, Tailwind 
 
-# Features
+## Features
 * Light/dark mode
 
+## Screenshots
+![Home](Readme_imgs/Portfolio.png)
 
 ## Technologies used: 
 * Next.js
