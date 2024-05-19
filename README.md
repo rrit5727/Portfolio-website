@@ -16,6 +16,5 @@
 * CSS 
 
 ## Libraries used: 
-* Embla Carousel
 * Type animation
 * React icons for projects carousel
