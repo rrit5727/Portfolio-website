@@ -19,10 +19,10 @@ export const EmblaCarousel = () => {
         <div className="embla__container">
 
           <div className="embla__slide flex flex-row h-4/5 justify-center items-center">
-            <div className='pl-5 w-3/5 h-4/5 rounded-lg'>
+            <div className='pl-5 pt-10 w-3/5 h-4/5 rounded-lg'>
               <img 
               src="https://raw.githubusercontent.com/tdha/project-three/main/Readme_imgs/Results.png" 
-              className='object-center rounded-lg' 
+              className='object-center rounded-lg h-[400px]' 
               />
             </div>
             <div className='w-1/3 h-3/5 '>
@@ -66,7 +66,7 @@ export const EmblaCarousel = () => {
             <div className='pl-5 pt-10 w-3/5 h-4/5 rounded-lg'>
               <img 
               src="https://raw.githubusercontent.com/rrit5727/Project2/main/Readme_images/Item-list.png" 
-              className='object-center rounded-lg' 
+              className='object-center  rounded-lg' 
               />
             </div>
             <div className='w-1/3 h-3/5 '>
@@ -84,7 +84,7 @@ export const EmblaCarousel = () => {
           </div>
 
           <div className="embla__slide flex flex-row h-4/5 justify-center items-center">
-            <div className='pl-5 pt-10  w-3/5 h-4/5 rounded-lg'>
+            <div className='pl-5 pt-20  w-3/5 h-4/5 rounded-lg'>
               <img 
               src="https://raw.githubusercontent.com/rrit5727/Portfolio-website/main/Readme_imgs/Portfolio.png" 
               className='object-center rounded-lg' 

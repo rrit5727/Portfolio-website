@@ -167,8 +167,11 @@ export default function Home() {
 
       <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-green-100" ref={ref}>
       <div className="text-black text-3xl font-bold items-center justify-center pt-10 pb-5 flex flex-row">
-        <img src="" alt="" />
-        <h1 className="text-3xl font-bold">Chat GP-ME</h1>
+        <img 
+          src="https://raw.githubusercontent.com/rrit5727/Portfolio-website/main/Readme_imgs/GPT.png" 
+          className="rounded-lg  h-[40px] " 
+        />
+        <h1 className="text-3xl font-bold pl-5">Chat GP-ME</h1>
       </div>
       <div className="pt-5 relative px-20 flex flex-col space-y-5 items-start justify-evenly text-center md:text-left md:max-h-fit">
         <div className="text-left text-2xl w-full max-w-7xl mx-auto">
