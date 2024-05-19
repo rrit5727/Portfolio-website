@@ -15,7 +15,8 @@
 * HTML 
 * CSS 
 
-## Libraries used: 
+## Libraries/APIs used: 
 * Type animation
 * React icons for dev-skills icons
 * EmblaCarousel for projects carousel
+* Intersection Observer API for triggering about me chat dialogue
