@@ -17,4 +17,5 @@
 
 ## Libraries used: 
 * Type animation
-* React icons for projects carousel
+* React icons for dev-skills icons
+* EmblaCarousel for projects carousel
