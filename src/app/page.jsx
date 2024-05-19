@@ -210,7 +210,7 @@ export default function Home() {
                     
                     I soon realised that the best part of my job was using algorithmic thinking to solve problems, speed up manual processes, and reduce errors.
                     
-                    I figured that coding would be a better fit for this type of creative problem-solving and would practice coding  after finishing my day job as a tax consultant.
+                    I figured that coding would be a better fit for this type of creative problem-solving and I would practice coding after finishing my day job as a tax consultant.
                     
                     The late-nights didn't bother me as my enthusiasm for coding meant that I could happily spend hours on a project that solved a practical problem.
                     
