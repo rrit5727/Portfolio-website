@@ -138,16 +138,61 @@ export default function Home() {
             </motion.div>
           </nav>
 
-            <section id="projects" className="h-screen snap-start pt- flex justify-center items-center">              
-              <div className="flex flex-col items-center justify-center h-3/5 w-4/5 rounded-lg overflow-hidden">
-                <h1 className="text-3xl pb-5">
-                  Projects
-                </h1>
-                <div className="h-full w-full m-auto py-16 px-20 relative group bg-teal-200 rounded-lg overflow-hidden" >
-                  <EmblaCarousel />
-                </div>  
-              </div>
-            </section>
+          <section id="projects" className="h-screen snap-start pt- flex justify-center items-center">              
+                        <div className="flex flex-col items-center justify-center h-3/5 w-3/5 rounded-lg overflow-hidden">
+                          <h1 className="text-3xl pb-5">
+                            Projects
+                          </h1>
+                          <div className="h-full w-full m-auto py-5 px-0 relative group bg-teal-200 rounded-lg overflow-hidden" >
+                            <EmblaCarousel />
+                          </div>  
+                        </div>
+          </section>
+
+                      <section id="intro" className=" snap-start pt-20 py-20 flex-row h-4/5 mb-40 overflow-hidden">
+                        <div className="pt-20 relative px-40 flex flex-col md:flex-row space-y-5 items-center justify-evenly text-center md:text-left md:max-h-fit" >
+                          <div className="text-left p-10 min-w-[380px] w-380px whitespace-nowrap">
+                            <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Hello, my name is </h4>
+                            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400">Ross Ritchie</h2>
+                            <span className="text-3xl">I am a </span> 
+                                <span className="text-3xl" style={{ color: textColor, fontWeight: fontWeight }}>
+                                  <TypeAnimation 
+                                    cursor={false}              
+                                    className={CURSOR_CLASS_NAME}
+                                    sequence={[
+                                      // Same substring at the start will only be typed out once, initially
+                                      ' corporate tax consultant',
+                                      1000, // wait 1s before replacing "Mice" with "Hamsters"
+                                      ' Software developer',
+                                      () => setTextColor('#14b8a6'),
+                                      () => setFontWeight('Bold'),
+                                      3000,
+                                      ' Software developer.',                  
+                                      (el) => el.classList.remove('custom-type-animation-cursor'),                
+                                    ]}
+                                    wrapper="span"
+                                    speed={50}
+                                    style={{  display: 'inline-block' }}
+                                    class="custom-type-animation-cursor"
+                                    repeat={0}
+                                  />
+                                
+              
+                                </span>
+                            <h4 className="text-1xl py-2 md:text-2xl dark:text-white">Based in Sydney</h4>
+                          </div>           
+                          <div className="w-[40px] min-w-[40px]">              
+                          </div>
+                          <div className="relative h-[380px] w-[380px] min-w-[380px] sm:w-[255px] bg-gradient-to-b from-teal-600 rounded-full overflow-hidden border-8 border-teal-500 border-solid" >
+                            <div className="rounded-full  overflow-hidden ">
+                              <Image src={headshot} layout="fill" objectFit="cover" />
+                            </div>
+                          </div>
+                        </div>
+                          <div className="text-5xl flex justify-center gap-16 py-1 text-gray-600 dark:text-gray-400">
+                            <AiFillLinkedin />
+                          </div>
+                      </section>   
             
 
           <section id="about" className="snap-start pt-20 overflow-hidden h-full mb-40 bg-green-100">
@@ -183,7 +228,7 @@ export default function Home() {
                       ``,
                       1000,
                       `Sure!
-
+                      
                       I started out as a corporate tax consultant and found that I really enjoyed using excel formulas to streamline analysing transaction data for tax purposes.
                       
                       I soon realised that the best part of my job was using algorithmic thinking to solve problems, speed up manual processes, and reduce errors.
@@ -208,51 +253,8 @@ export default function Home() {
         </section>
 
                    
-        <section id="intro" className=" snap-start pt-20 py-20 flex-row h-4/5 mb-40 overflow-hidden">
-          <div className="pt-20 relative px-40 flex flex-col md:flex-row space-y-5 items-center justify-evenly text-center md:text-left md:max-h-fit" >
-            <div className="text-left p-10 min-w-[380px] w-380px whitespace-nowrap">
-              <h4 className="text-2xl py-2 md:text-3xl dark:text-white">Hello, my name is </h4>
-              <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl dark:text-teal-400">Ross Ritchie</h2>
-              <span className="text-3xl">I am a </span> 
-                  <span className="text-3xl" style={{ color: textColor, fontWeight: fontWeight }}>
-                    <TypeAnimation 
-                      cursor={false}              
-                      className={CURSOR_CLASS_NAME}
-                      sequence={[
-                        // Same substring at the start will only be typed out once, initially
-                        ' corporate tax consultant',
-                        1000, // wait 1s before replacing "Mice" with "Hamsters"
-                        ' Software developer',
-                        () => setTextColor('#14b8a6'),
-                        () => setFontWeight('Bold'),
-                        3000,
-                        ' Software developer.',                  
-                        (el) => el.classList.remove('custom-type-animation-cursor'),                
-                      ]}
-                      wrapper="span"
-                      speed={50}
-                      style={{  display: 'inline-block' }}
-                      class="custom-type-animation-cursor"
-                      repeat={0}
-                    />
-                  
-
-                  </span>
-              <h4 className="text-1xl py-2 md:text-2xl dark:text-white">Based in Sydney</h4>
-            </div>           
-            <div className="w-[40px] min-w-[40px]">              
-            </div>
-            <div className="relative h-[380px] w-[380px] min-w-[380px] sm:w-[255px] bg-gradient-to-b from-teal-600 rounded-full overflow-hidden border-8 border-teal-500 border-solid" >
-              <div className="rounded-full  overflow-hidden ">
-                <Image src={headshot} layout="fill" objectFit="cover" />
-              </div>
-            </div>
-          </div>
-            <div className="text-5xl flex justify-center gap-16 py-1 text-gray-600 dark:text-gray-400">
-              <AiFillLinkedin />
-            </div>
-        </section>   
         
+                      
                 
 
         
