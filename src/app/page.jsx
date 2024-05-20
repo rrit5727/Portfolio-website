@@ -118,16 +118,7 @@ export default function Home() {
             </motion.div>
           </nav>
 
-    <section id="projects" className="h-screen snap-start pt- flex justify-center items-center">              
-      <div className="flex flex-col items-center justify-center h-3/5 w-4/5 rounded-lg overflow-hidden">
-        <h1 className="text-3xl pb-5 dark:text-white">
-          Projects
-        </h1>
-        <div className="h-full w-full m-auto py-5 px-0 relative group bg-teal-200 rounded-lg overflow-hidden dark:bg-teal-800" >
-          <EmblaCarousel />
-        </div>  
-      </div>
-    </section>
+    
 
       <section id="intro" className=" snap-start pt-20 py-20 flex-row h-4/5 mb-40 overflow-hidden">
         <div className="pt-20 relative px-40 flex flex-col md:flex-row space-y-5 items-center justify-evenly text-center md:text-left md:max-h-fit" >
@@ -245,7 +236,16 @@ export default function Home() {
       </div>
     </section>
 
-                  
+    <section id="projects" className="h-screen snap-start pt- flex justify-center items-center">              
+      <div className="flex flex-col items-center justify-center h-3/5 w-4/5 rounded-lg overflow-hidden">
+        <h1 className="text-3xl pb-5 dark:text-white">
+          Projects
+        </h1>
+        <div className="h-full w-full m-auto py-5 px-0 relative group bg-teal-200 rounded-lg overflow-hidden dark:bg-teal-800" >
+          <EmblaCarousel />
+        </div>  
+      </div>
+    </section>            
                                    
     <section id="skills" className=" h-screen snap-start pt-20">
       <div className="flex-col justify-center items-center text-center justify-items-end">
