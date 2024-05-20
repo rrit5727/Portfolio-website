@@ -130,7 +130,7 @@ export default function Home() {
                     className={CURSOR_CLASS_NAME}
                     sequence={[
                       // Same substring at the start will only be typed out once, initially
-                      ' corporate tax consultant',
+                      ' corporate tax consultant.',
                       1000, // wait 1s before replacing "Mice" with "Hamsters"
                       ' Software developer',
                       () => setTextColor('#14b8a6'),
