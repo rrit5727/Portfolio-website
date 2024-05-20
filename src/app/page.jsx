@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
 import Head from "next/head";
-import { useRouter } from 'next/router';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin} from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
@@ -20,6 +19,7 @@ import postgresql from '../../public/dev-icons/postgresql.png';
 import python from '../../public/dev-icons/python.png';
 import react from '../../public/dev-icons/react.png';
 import tailwind from '../../public/dev-icons/tailwind.png';
+import { useClient } from 'next/client';
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
@@ -40,15 +40,6 @@ export default function Home() {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const [currentLocation, setCurrentLocation] = useState('');
-  const router = useRouter();
-
-  useEffect(() => {
-    if (router.isReady) {
-      setCurrentLocation(router.asPath);
-    }
-  }, [router.isReady, router.asPath]);
 
   useEffect(() => {
     if (inView && !animationTriggered) {

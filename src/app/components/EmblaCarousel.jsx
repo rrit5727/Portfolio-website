@@ -1,9 +1,15 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 export const EmblaCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel()
+
+  useEffect(() => {    
+    if (emblaApi) {
+      
+    }
+  }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
