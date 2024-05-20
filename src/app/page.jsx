@@ -26,11 +26,11 @@ import { TypeAnimation } from 'react-type-animation';
 import { red } from "tailwindcss/colors";
 import {EmblaCarousel} from './components/EmblaCarousel';
 import { useInView } from "react-intersection-observer";
+import { useRouter } from 'next/router';
 
 
 
 export default function Home() {
-  
   
   const [darkMode, setDarkMode] = useState(false);
   const [textColor, setTextColor] = useState('black');
@@ -40,6 +40,18 @@ export default function Home() {
     triggerOnce: true,
     threshold: 0.1,
   });
+  
+  
+  useEffect(() => {
+    // Dynamically import useRouter only client-side
+    const loadRouter = async () => {
+      const { useRouter } = await import('next/router');
+      const router = useRouter();
+      // Now you can safely use the router
+    };
+    loadRouter();
+  }, []); // Ensure useEffect runs only once when the component mounts
+
 
   useEffect(() => {
     if (inView && !animationTriggered) {
@@ -49,6 +61,15 @@ export default function Home() {
 
   const CURSOR_CLASS_NAME = 'custom-type-animation-cursor';
 
+  
+  const useRouterClient = () => import('next/router');
+
+  useEffect(() => {
+    useRouterClient().then(({ useRouter }) => {
+      const router = useRouter();
+      // Now you can safely use the router
+    });
+  }, []); // Ensure useEffect runs only once when the component mounts
 
   return (
     <div className={darkMode ? "dark" : ""}>
