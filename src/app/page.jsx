@@ -1,11 +1,11 @@
 'use client'
 import Image from "next/image";
 import Head from "next/head";
+import { useRouter } from 'next/router';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin} from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import headshot from '../../public/rr-head-shot.jpg';
-import excel7 from '../../public/excel7.png';
 import css from '../../public/dev-icons/css.png';
 import aws from '../../public/dev-icons/aws.png';
 import bootstrap from '../../public/dev-icons/bootstrap.png';
@@ -20,10 +20,7 @@ import postgresql from '../../public/dev-icons/postgresql.png';
 import python from '../../public/dev-icons/python.png';
 import react from '../../public/dev-icons/react.png';
 import tailwind from '../../public/dev-icons/tailwind.png';
-import { useClient } from 'next/client';
 import { useState, useRef, useEffect } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import {RxDotFilled} from 'react-icons/rx';
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { red } from "tailwindcss/colors";
@@ -44,6 +41,15 @@ export default function Home() {
     threshold: 0.1,
   });
 
+  const [currentLocation, setCurrentLocation] = useState('');
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.isReady) {
+      setCurrentLocation(router.asPath);
+    }
+  }, [router.isReady, router.asPath]);
+
   useEffect(() => {
     if (inView && !animationTriggered) {
       setAnimationTriggered(true);
@@ -56,11 +62,11 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
       
-      <head>
+      <Head>
         <title>Portfolio</title>
         <meta name="description"/>
         <link rel="icon" href="/favicon.ico" />
-      </head>
+      </Head>
       
 
       <main className="bg-green-100  dark:bg-gray-900 relative ">
