@@ -14,8 +14,8 @@ export const EmblaCarousel = () => {
   }, [emblaApi])
 
   return (
-    <div className="embla w-full h-full">
-      <div className="embla__viewport h-full" ref={emblaRef}>
+    <div className="embla w-full h-full ">
+      <div className="embla__viewport h-full dark:text-white" ref={emblaRef}>
         <div className="embla__container">
 
           <div className="embla__slide flex flex-row h-4/5 justify-center items-center">
@@ -99,17 +99,22 @@ export const EmblaCarousel = () => {
                 </p>                
               </div>              
             </div>
-          </div>
-          
-                    
-                    
+          </div>       
         </div>
       </div>
-      <button className="embla__prev" onClick={scrollPrev}>
-        Prev
+      <button 
+        className="embla__prev absolute left-0 top-1/2 transform -translate-y-1/2
+        bg-gray-800 text-white p-2 rounded-full ml-4"
+        onClick={scrollPrev}
+      >
+        <BsChevronCompactLeft size={24}/>        
       </button>
-      <button className="embla__next" onClick={scrollNext}>
-        Next
+      <button 
+        className="embla__next absolute right-0 top-1/2 transform -translate-y-1/2
+         bg-gray-800 text-white p-2 rounded-full mr-4" 
+         onClick={scrollNext}
+      >
+        <BsChevronCompactRight size={24}/>        
       </button>
     </div>
   )
