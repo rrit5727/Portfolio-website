@@ -29,8 +29,9 @@ export const EmblaCarousel = () => {
               <div className=' px-10 py-15 text-center flex flex-col justify-center rounded-lg object-contain'>
                 <h1 className='text-2xl pb-5 border-b-4  border-b-secondary'>AFFORDABLE COMMUTE FINDER</h1>
                 <p className='pt-5'>
-                  React App that calculates travel time between the users place of work and various recently sold
-                   properties. The results are grouped according to 15 minute time bands and sorted by affordability.
+                  React App that calculates travel time (by car and public transport) between the users place 
+                  of work and various recently sold properties. The results are grouped according to 15 minute 
+                  time bands and sorted by affordability.
                 </p>
                 <p className='pt-10'>
                   This app uses the travel time and openstreet APIs to calculate co-ordinates and travel time 
@@ -51,7 +52,7 @@ export const EmblaCarousel = () => {
               <div className=' px-10 py-15 text-center flex flex-col justify-center rounded-lg object-contain'>
                 <h1 className='text-2xl pb-5 border-b-4  border-b-secondary'>METACRITIC FOR SONGS</h1>
                 <p className='pt-5'>
-                Python app that that generates a critical consensus for popular songs by scraping music publications' 
+                Python app that that generates a critical consensus for popular songs by scraping music publications 
                 end of year lists.
                 </p>
                 <p className='pt-10'>
